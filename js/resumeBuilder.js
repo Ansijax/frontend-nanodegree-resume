@@ -14,7 +14,8 @@ var skill= ["c", "Java" , "js" , " jQuery"];
 var bio =	{
 	"name" : name,
 	"role" : role,
-	"contact" :{ 
+	"contacts" :{ 
+		"location": "Roma, Italy",
 		"mail": "massimo.lamorgia@gmail.com",
 		"phone": "3930743287"
 	},
@@ -22,8 +23,8 @@ var bio =	{
 	"skills" :skill
 };
 
-var works ={
-	"job":[
+var work ={
+	"jobs":[
 {
 	"employers":"CATTID",
 	"title":"Internship",
@@ -41,7 +42,7 @@ var works ={
 {
 	"employers":"PayBay Network",
 	"title":"Internship",
-	"location": "Roma, Sapienza Univeristy",
+	"location": "Roma, via xx settembre",
 	"date": " from mm/aaaa to mm/aaaa",
 	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 },
@@ -72,11 +73,11 @@ var projects =
 
 var education = [
 { "school": "La Sapienza",
-"location": "Rome, Italy",
+"location": "Rome, Sapienza Univeristy",
 "grade":"Bachelor degree"
 },
 { "school": "La Sapienza",
-"location": "Rome, Italy",
+"location": "Rome, Sapienza Univeristy",
 "grade":"Master degree"
 },
 { "school": "Udacity",
@@ -128,7 +129,7 @@ if(bio.skills.length > 0){
 }
 
 
-for (job in works.job){
+for (job in work.job){
 	$("#workExperience").append(HTMLworkStart);
 	var formattedEmployer = HTMLworkEmployer.replace("%data%", works.job[job].employers);
 	var formattedTitle  = HTMLworkTitle.replace("%data%", works.job[job].title);
@@ -167,6 +168,8 @@ function displayWork(){
 
 
 }
+
+$("#map-div").append(googleMap);
 /*var formmattedName = HTMLheaderName.replace("%data%",name);
 var formmattedRole = HTMLheaderRole.replace("%data%",role);
 // $("#main").append(funThoughts);
