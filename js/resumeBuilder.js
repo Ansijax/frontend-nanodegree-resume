@@ -3,14 +3,14 @@ This is empty on purpose! Your code to build the resume will go here.
  */
 
 var name = "Massimo La Morgia";
-var role = "Developer";
+var role = "Phd student at Sapienza Univeristy";
 /*var awesomeThoughts = "I am Massimo and i am AWESOME";
 funThoughts =awesomeThoughts.replace("AWESOME","fun")
 /*var  str = "audacity";
 var newStr = str.slice(2);
 console.log("U" + newStr);
 console.log(funThoughts);*/
-var skill= ["c", "Java" , "js" , " jQuery"];
+var skill= ["C","C++","Java Card", "Java" , "js" , " jQuery"];
 var bio =	{
 	"name" : name,
 	"role" : role,
@@ -129,10 +129,10 @@ if(bio.skills.length > 0){
 }
 
 
-for (job in work.job){
+for (job in work.jobs){
 	$("#workExperience").append(HTMLworkStart);
-	var formattedEmployer = HTMLworkEmployer.replace("%data%", works.job[job].employers);
-	var formattedTitle  = HTMLworkTitle.replace("%data%", works.job[job].title);
+	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employers);
+	var formattedTitle  = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 	displayWork();	
 
 }
@@ -159,11 +159,11 @@ function displayWork(){
 	var formattedEmployerTitle = formattedEmployer + formattedTitle;
 	$(".work-entry:last").append(formattedEmployerTitle);
 
-	var formattedData = HTMLworkDates.replace("%data%", works.job[job].date);
+	var formattedData = HTMLworkDates.replace("%data%", work.jobs[job].date);
 	$(".work-entry:last").append(formattedData);
-	var formattedLocation = HTMLworkLocation.replace("%data%", works.job[job].location);
+	var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
 	$(".work-entry:last").append(formattedLocation);
-	var formattedDescription = HTMLworkDescription.replace("%data%", works.job[job].description);
+	var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 	$(".work-entry:last").append(formattedDescription);
 
 
