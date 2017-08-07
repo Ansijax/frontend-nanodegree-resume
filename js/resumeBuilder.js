@@ -115,9 +115,11 @@ var formattedLocation = HTMLlocation.replace("%data%",bio.contacts.location);
 var formattedPic = HTMLbioPic.replace("%data%", bio.image);
 $("#header").append(formattedName);
 $("#header").append(formattedRole);
-$("#header").append(formattedMail);
-$("#header").append(formattedPhone);
-$("#header").append(formattedLocation);
+$("#header").append(HTMLContactStart)
+$("#contacts").append(formattedMail);
+
+$("#contacts").append(formattedPhone);
+$("#contacts").append(formattedLocation);
 $("#header").append(formattedPic);
 
 
