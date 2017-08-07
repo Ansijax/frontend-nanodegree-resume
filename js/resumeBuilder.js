@@ -32,35 +32,50 @@ var work ={
 		"title":"Phd student",
 		"location": "Roma, Sapienza Univeristy, Via Regine Elena 295",
 		"date": " from 11/2015 to present",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		"description": "Studente di dottorato presso il dipartimento di Informatica, la “Sapienza” di Roma, advisor Prof. Alessandro Mei. Dedicando la mia attività di ricerca ai sistemi distribuiti e TOR (The Onion Router). In particolare alla privacy degli utenti su rete TOR e l’identificazione di attacchi agli HSDIR."
 	},
 	{
 		"employers":"TAGstagram",
 		"title":"Founder",
 		//"location": "Roma, Sapienza Univeristy",
 		"date": " from 09/2012 to present",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		"description": "Applicazione Android volta ad aiutare gli utenti a trovare insiemi di tag per le foto di Instagram, l’applicazione conta al momento oltre 500K download e recensioni su blog del settore (https://play.google.com/store/apps/details?id=com.ansij.tagstagram). Applicazione rimossa dal play store inseguito allo shut down delle API di instagram"
+	},
+	{
+		"employers":"SAI S.R.L.",
+		"title":"Consultant",
+		//"location": "Roma, Via Amedeo Crivellucci 35",
+		"date": "Occasionale",
+		"description": "Stesura delle specifiche di progetto per un sistema di pagamento via NFC e SIM based, coordinando l’adeguamento a tali specifiche delle risorse interne all’azienda e i consulenti esterni."
+	}
+	,
+	{
+		"employers":"Consorzio Roma Ricerche",
+		"title":"Software Engineer",
+		//"location": "Roma, Via Giacomo Peroni 130",
+		"date": " from 10/2013 to 03/2014",
+		"description": ""
 	},
 	{
 		"employers":"PayBay Network",
 		"title":"Android & NFC consultant",
 		"location": "Roma, via xx settembre",
 		"date": " from 10/2013 to 03/2014",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		"description": "Progettazione e integrazione della tecnologia NFC e TSM esterni con i servizi offerti dall’azienda. Collaborazione allo sviluppo dell’applicazione mobile Passpartu."
 	},
 	{
 		"employers":"Computer Science Department",
 		"title":"Research Fellow",
 		"location": "Roma, Sapienza Univeristy",
 		"date": " from 01/2013 to 10/2015",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		"description": "RFIDLab in cui ho ricoperto il ruolo di  software engineer nell’ambito dei sistemi di pagamento elettronico, campi applicativi della tecnologia NFC, RFID e smart card, sviluppo di applicazione mobile."
 	},
 	{
 		"employers":"CATTID",
 		"title":"Research Fellow",
 		"location": "Roma, Sapienza Univeristy",
 		"date": " from 09/2011 to 12/2012",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		"description": "Laboratorio NFC e mobile, in cui ho ricoperto il ruolo di software engineer nell’ambito dei sistemi di pagamento elettronico, campi applicativi della tecnologia NFC e smart card"
 	}
 	]
 };
