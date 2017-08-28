@@ -37,7 +37,7 @@ var work ={
 	{
 		"employers":"TAGstagram",
 		"title":"Founder",
-		"location": "Roma, Sapienza Univeristy",
+		"location": "Roma",
 		"date": " from 09/2012 to present",
 		"description": "Applicazione Android volta ad aiutare gli utenti a trovare insiemi di tag per le foto di Instagram, l’applicazione conta al momento oltre 500K download e recensioni su blog del settore (https://play.google.com/store/apps/details?id=com.ansij.tagstagram). Applicazione rimossa dal play store inseguito allo shut down delle API di instagram"
 	},
@@ -81,8 +81,8 @@ var work ={
 };
 
 
-var projects =[ 
-	
+var personalProjects ={
+	"projects":[ 
 	{
 		"title":"TAGstagram",
 		"description":"Android app",
@@ -95,31 +95,31 @@ var projects =[
 		"link":"https://play.google.com/store/apps/details?id=com.paybay.passpartu",
 		
 	}
-	];
+	]};
 
 
 
 
 
 
-var education = [
+var education ={ 
+	"course":[
+
 	{ "school": "La Sapienza",
 	"location": "Rome, Sapienza Univeristy",
-	"grade":"Bachelor degree"
-	},
-	{ "school": "La Sapienza",
-	"location": "Rome, Sapienza Univeristy",
-	"grade":"Master degree"
-	},
+	"type":"Master degree"
+
+	"grade":"110/100 cum Laude"	},
 	{ "school": "Udacity",
 	"course": "Developing Android App",
 	"grade":"Graduated"
 	},
 	{ "school": "Udacity",
 	"course": "JavaScript Basics",
-	"grade":"Attende"
+	"grade":"Full free course"
 	}
-	];
+	]
+};
 
 var formattedName = HTMLheaderName.replace("%data%",bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
@@ -178,31 +178,6 @@ for (job in work.jobs){
 
 }
 
-
-projects.display = function(){
-
-	for (project in projects){
-		console.log("test");
-		$("#projects").append(HTMLprojectStart);
-		
-		if(projects[project].link != null){
-			var projectTitle = HTMLprojectTitle.replace("#", projects[project].link);
-			projectTitle = projectTitle.replace("%data%", projects[project].title);
-		}else{
-			var projectTitle = HTMLprojectTitle.replace("%data%", projects[project].title);
-		}
-		
-		var projectDescription= HTMLprojectDescription.replace("%data%", projects[project].description);
-		$(".project-entry:last").append(projectTitle);
-		$(".project-entry:last").append(projectDescription);
-	
-	}
-};
-
-projects.display();
-
-$("#main").append(internationalizeButton);
-
 function displayWork(){
 
 	var formattedEmployerTitle = formattedEmployer + formattedTitle;
@@ -217,6 +192,45 @@ function displayWork(){
 
 
 }
+
+
+projects.display = function(){
+
+	for (project in personalProjects.projects){
+
+
+		$("#projects").append(HTMLprojectStart);
+		
+		if(personalProjects.projects[project].link != null){
+			var projectTitle = HTMLprojectTitle.replace("#", personalProjects.projects[project].link);
+			projectTitle = projectTitle.replace("%data%", personalProjects.projects[project].title);
+		}else{
+			var projectTitle = HTMLprojectTitle.replace("%data%", personalProjects.projects[project].title);
+		}
+		
+		var projectDescription= HTMLprojectDescription.replace("%data%", personalProjects.projects[project].description);
+		$(".project-entry:last").append(projectTitle);
+		$(".project-entry:last").append(projectDescription);
+	
+	}
+};
+
+projects.display();
+
+
+education.display=function(){
+	for(school in education.course){
+
+
+
+	}
+
+}
+
+education.display();
+$("#main").append(internationalizeButton);
+
+
 
 $("#map-div").append(googleMap);
 var formmattedName = HTMLheaderName.replace("%data%",name);
