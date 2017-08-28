@@ -107,8 +107,7 @@ var education ={
 
 	{ "school": "La Sapienza",
 	"location": "Rome, Sapienza Univeristy",
-	"type":"Master degree"
-
+	"type":"Master degree",
 	"grade":"110/100 cum Laude"	},
 	{ "school": "Udacity",
 	"course": "Developing Android App",
