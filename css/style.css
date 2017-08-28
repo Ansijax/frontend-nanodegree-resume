@@ -166,6 +166,13 @@ ul {
   display: none;
 }
 
+.certificatepic {
+ 
+  width: 300px;
+  height: auto;
+  
+}
+
 img {
   padding: 10px;
 }

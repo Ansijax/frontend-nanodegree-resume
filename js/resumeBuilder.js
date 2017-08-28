@@ -10,7 +10,7 @@ funThoughts =awesomeThoughts.replace("AWESOME","fun")
 var newStr = str.slice(2);
 console.log("U" + newStr);
 console.log(funThoughts);*/
-var skill= ["C","C++","Java Card", "Java" , "js" , " jQuery"];
+var skill= ["C","C++","Java Card", "Java" , "js" , " jQuery", "Android"];
 var bio =	{
 	"name" : name,
 	"role" : role,
@@ -104,18 +104,42 @@ var personalProjects ={
 
 var education ={ 
 	"course":[
-
-	{ "school": "La Sapienza",
-	"location": "Rome, Sapienza Univeristy",
-	"type":"Master degree",
-	"grade":"110/100 cum Laude"	},
-	{ "school": "Udacity",
-	"course": "Developing Android App",
-	"grade":"Graduated"
+	{
+		"school": "La Sapienza University",
+		"course":"Phd student in Computer Science",
+		"location": "Rome",
+		"type":"Master degree",
+		"url":"http://www.phd.di.uniroma1.it/",
+		"vote":"attendee"	
 	},
-	{ "school": "Udacity",
-	"course": "JavaScript Basics",
-	"grade":"Full free course"
+
+	{
+		"school": "La Sapienza University",
+		"course":"Computer Science",
+		"location": "Rome",
+		"type":"Master degree",
+		"url":"http://www.di.uniroma1.it/",
+		"vote":"110/110 cum Laude"	
+	},
+	{ 
+		"school": "Udacity",
+		"course": "Developing Android App",
+		"url":"https://classroom.udacity.com/courses/ud853",
+		"img":"./images/certificate.png",
+		"vote":"Graduated"
+	},
+	{
+		"school": "Udacity",
+		"course": "JavaScript Basics",
+		"url":"https://classroom.udacity.com/courses/ud804",
+		"vote":"Full free course"
+	},
+	{
+		"school": "Udacity",
+		"course": "Intro to Data Analysis",
+		"url":"https://classroom.udacity.com/courses/ud170",
+		"vote":"Full free course"
+
 	}
 	]
 };
@@ -195,11 +219,9 @@ function displayWork(){
 
 projects.display = function(){
 
+
 	for (project in personalProjects.projects){
-
-
 		$("#projects").append(HTMLprojectStart);
-		
 		if(personalProjects.projects[project].link != null){
 			var projectTitle = HTMLprojectTitle.replace("#", personalProjects.projects[project].link);
 			projectTitle = projectTitle.replace("%data%", personalProjects.projects[project].title);
@@ -218,9 +240,23 @@ projects.display();
 
 
 education.display=function(){
+	
+	
 	for(school in education.course){
+		$("#education").append(HTMLschoolStart);
+		var schoolName = HTMLschoolName.replace("%data%", education.course[school].school).replace("#",education.course[school].url);
+		var schoolDegree= HTMLschoolCourse.replace("%data%",education.course[school].course);
+		var schoolVote= HTMLschoolVote.replace("%data%",education.course[school].vote);
+		var schoolLocation = HTMLschoolLocation.replace("%data%",education.course[school].location);
 
-
+		$(".education-entry:last").append(schoolName + schoolDegree);
+		$(".education-entry:last").append(schoolLocation);
+		$(".education-entry:last").append(schoolVote);
+		if(education.course[school].img!=null){
+			var schoolImg = HTMLschoolImage.replace("%data%",education.course[school].img);
+			$(".education-entry:last").append(schoolImg);
+		}
+		
 
 	}
 
