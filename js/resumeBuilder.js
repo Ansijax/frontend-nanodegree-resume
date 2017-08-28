@@ -30,21 +30,21 @@ var work ={
 	{
 		"employers":"Computer Science Department",
 		"title":"Phd student",
-		"location": "Roma, Sapienza Univeristy, Via Regine Elena 295",
+		"location": "Roma, Sapienza Univeristy, Viale Regina Elena 295",
 		"date": " from 11/2015 to present",
 		"description": "Studente di dottorato presso il dipartimento di Informatica, la “Sapienza” di Roma, advisor Prof. Alessandro Mei. Dedicando la mia attività di ricerca ai sistemi distribuiti e TOR (The Onion Router). In particolare alla privacy degli utenti su rete TOR e l’identificazione di attacchi agli HSDIR."
 	},
 	{
 		"employers":"TAGstagram",
 		"title":"Founder",
-		//"location": "Roma, Sapienza Univeristy",
+		"location": "Roma, Sapienza Univeristy",
 		"date": " from 09/2012 to present",
 		"description": "Applicazione Android volta ad aiutare gli utenti a trovare insiemi di tag per le foto di Instagram, l’applicazione conta al momento oltre 500K download e recensioni su blog del settore (https://play.google.com/store/apps/details?id=com.ansij.tagstagram). Applicazione rimossa dal play store inseguito allo shut down delle API di instagram"
 	},
 	{
 		"employers":"SAI S.R.L.",
 		"title":"Consultant",
-		//"location": "Roma, Via Amedeo Crivellucci 35",
+		"location": "Roma, Via Don Orione 8",
 		"date": "Occasionale",
 		"description": "Stesura delle specifiche di progetto per un sistema di pagamento via NFC e SIM based, coordinando l’adeguamento a tali specifiche delle risorse interne all’azienda e i consulenti esterni."
 	}
@@ -52,14 +52,14 @@ var work ={
 	{
 		"employers":"Consorzio Roma Ricerche",
 		"title":"Software Engineer",
-		//"location": "Roma, Via Giacomo Peroni 130",
+		"location": "Roma, Via Giacomo Peroni 130",
 		"date": " from 10/2013 to 03/2014",
 		"description": ""
 	},
 	{
 		"employers":"PayBay Network",
 		"title":"Android & NFC consultant",
-		"location": "Roma, via xx settembre",
+		"location": "Roma, via XX settembre",
 		"date": " from 10/2013 to 03/2014",
 		"description": "Progettazione e integrazione della tecnologia NFC e TSM esterni con i servizi offerti dall’azienda. Collaborazione allo sviluppo dell’applicazione mobile Passpartu."
 	},
@@ -81,20 +81,19 @@ var work ={
 };
 
 
-var projects =
-	[ 
+var projects =[ 
 	
 	{
 		"title":"TAGstagram",
 		"description":"Android app",
-		"link":"www.tagstagram.lol",
+		//"link":"www.tagstagram.lol",
 		"image":"www.tagstagram.lol"
 	},
 	{
 		"title":"Passpartu",
-		"description":"Android app",
-		"link":"www.tagstagram.lol",
-		"image":"www.tagstagram.lol"
+		"description":"Android app - Paybay Network",
+		"link":"https://play.google.com/store/apps/details?id=com.paybay.passpartu",
+		
 	}
 	];
 
@@ -104,23 +103,23 @@ var projects =
 
 
 var education = [
-{ "school": "La Sapienza",
-"location": "Rome, Sapienza Univeristy",
-"grade":"Bachelor degree"
-},
-{ "school": "La Sapienza",
-"location": "Rome, Sapienza Univeristy",
-"grade":"Master degree"
-},
-{ "school": "Udacity",
-"course": "Developing Android App",
-"grade":"Graduated"
-},
-{ "school": "Udacity",
-"course": "JavaScript Basics",
-"grade":"Attende"
-}
-];
+	{ "school": "La Sapienza",
+	"location": "Rome, Sapienza Univeristy",
+	"grade":"Bachelor degree"
+	},
+	{ "school": "La Sapienza",
+	"location": "Rome, Sapienza Univeristy",
+	"grade":"Master degree"
+	},
+	{ "school": "Udacity",
+	"course": "Developing Android App",
+	"grade":"Graduated"
+	},
+	{ "school": "Udacity",
+	"course": "JavaScript Basics",
+	"grade":"Attende"
+	}
+	];
 
 var formattedName = HTMLheaderName.replace("%data%",bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
@@ -181,10 +180,18 @@ for (job in work.jobs){
 
 
 projects.display = function(){
-console.log("test");
+
 	for (project in projects){
+		console.log("test");
 		$("#projects").append(HTMLprojectStart);
-		var projectTitle = HTMLprojectTitle.replace("%data%", projects[project].title);
+		
+		if(projects[project].link != null){
+			var projectTitle = HTMLprojectTitle.replace("#", projects[project].link);
+			projectTitle = projectTitle.replace("%data%", projects[project].title);
+		}else{
+			var projectTitle = HTMLprojectTitle.replace("%data%", projects[project].title);
+		}
+		
 		var projectDescription= HTMLprojectDescription.replace("%data%", projects[project].description);
 		$(".project-entry:last").append(projectTitle);
 		$(".project-entry:last").append(projectDescription);

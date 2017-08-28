@@ -83,7 +83,7 @@ function logClicks(x,y) {
       y: y
     }
   );
-  console.log('x location: ' + x + '; y location: ' + y);
+  //console.log('x location: ' + x + '; y location: ' + y);
 }
 
 $(document).click(function(loc) {
@@ -205,6 +205,7 @@ function initializeMap() {
   */
   function pinPoster(locations) {
 
+
     // creates a Google place search service object. PlacesService does the work of
     // actually searching for location data.
     var service = new google.maps.places.PlacesService(map);
@@ -219,6 +220,7 @@ function initializeMap() {
 
       // Actually searches the Google Maps API for location data and runs the callback
       // function with the search results after each search.
+      
       service.textSearch(request, callback);
     }
   }
